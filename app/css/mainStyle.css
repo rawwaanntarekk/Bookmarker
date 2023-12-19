@@ -1,5 +1,131 @@
+:root {
+    --main-icon-width: 1.9rem;
+    --main-font: 'PT Sans Caption', sans-serif;
+    --main-duration : 0.4s;
+
+}
+
+::selection {
+    background-color: #FEC260;
+
+}
+
+body {
+    background-color: #F7ECDE;
+    font-family: var(--main-font);
+}
+
+svg {
+    width: var(--main-icon-width)
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+}
 
 
-.w-75 {
-    width: 75%;
+.back-style {
+    position: relative;
+    width: fit-content;
+
+}
+
+.back-style::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 103%;
+    height: 40%;
+    background-color: #FEC260;
+    z-index: -1;
+    transition: all var(--main-duration);
+}
+
+.back-style:hover::before {
+    height: 65%;
+}
+
+.main-content {
+    border-top: 2px dotted #212529;
+    border-bottom: 2px dotted #212529;
+}
+
+.secondary-header {
+    font-family: 'Righteous', sans-serif;
+    margin-bottom: 0 !important;
+    background-image: linear-gradient(to right, #40A65C, #B4AC4A);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.secondary-header svg:first-of-type {
+    color: #40A65C;
+}
+
+.secondary-header svg:last-of-type {
+    color: #B4AC4A;
+}
+
+.form-content svg {
+    --main-icon-width: 1.5rem;
+    width: var(--main-icon-width);
+    vertical-align: sub;
+
+}
+
+.form-content input {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.form-content input:focus {
+    outline: none;
+    border: 1px solid red;
+    box-shadow: rgba(254, 194, 96, 0.333) 0px 0px 0px 4px;
+}
+
+#submit-btn {
+    background-color: #d65734;
+    transition: all var(--main-duration);
+}
+
+#submit-btn:hover {
+    background-color: #BB4120;
+}
+
+.sites-table svg {
+    --main-icon-width: 1.4rem;
+    width: var(--main-icon-width);
+    display: inline;
+}
+
+.sites-table h5 {
+    vertical-align: middle;
+
+}
+
+
+
+.sites-table .visit-btn, .sites-table .delete-btn {
+    border: none;
+    color: white;
+    transition: all var(--main-duration);
+}
+
+.sites-table .visit-btn {
+    background-color: #B4AC4A;
+}
+
+.sites-table .delete-btn {
+    background-color: #eb1d36;
+}
+
+.sites-table .visit-btn:hover {
+    background-color: #8A9E23;
+}
+
+.sites-table .delete-btn:hover {
+    background-color: #D30820;
 }
