@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="stylesheet" href="app/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app/css/mainStyle.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="py-5 text-center container-fluid mx-auto">
+        <div class="row gy-5">
+            <div class="header d-flex justify-content-center mb-5 ">
+                <h1 class="back-style display-4">Bookmarker</h1>
+            </div>
+
+            <div class=" main-content mx-auto row  py-5 justify-content-center col-9">
+                <div class="secondary-header  d-flex align-items-center justify-content-center ">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" data-slot="icon"
+                        class="w-6 h-6">
+                        <path fill-rule="evenodd"
+                            d="M6.32 2.577a49.255 49.255 0 0 1 11.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 0 1-1.085.67L12 18.089l-7.165 3.583A.75.75 0 0 1 3.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <h2 class="mx-1 mb-0">Bookmark your favorite sites</h2>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" data-slot="icon"
+                        class="w-6 h-6">
+                        <path fill-rule="evenodd"
+                            d="M6.32 2.577a49.255 49.255 0 0 1 11.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 0 1-1.085.67L12 18.089l-7.165 3.583A.75.75 0 0 1 3.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="form-content  form-control bg-transparent border-0 text-start p-1 mt-3 ">
+                    <div class="siteNameInput d-flex flex-column  mx-auto">
+                        <label for="siteName" class="d-inline mb-1 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" data-slot="icon" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0 1 20.25 6v12A2.25 2.25 0 0 1 18 20.25H6A2.25 2.25 0 0 1 3.75 18V6A2.25 2.25 0 0 1 6 3.75h1.5m9 0h-9" />
+                            </svg>
+
+                            <h6 class="d-inline fw-bolder mb-2">Site Name</h6>
+                        </label>
+                        <input type="text" id="siteName" class="rounded  px-3 py-2 mb-4 " placeholder="Bookmark Name ">
+                    </div>
+
+                    <div class="siteURLInput d-flex flex-column  mx-auto">
+                        <label for="siteURL" class="d-inline mb-1 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" data-slot="icon" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                            </svg>
+
+                            <h6 class="d-inline fw-bolder mb-2">Site URL</h6>
+                        </label>
+                        <input type="text" id="siteURL" class="rounded px-3 py-2 mb-2" placeholder="Website URL ">
+                    </div>
+                </div>
+                <button id="submit-btn" class="border-0 text-white col-sm-4 col-lg-2 p-2 rounded mt-4"> Submit</button>
+
+            </div>
+
+            <section class="sites-table row col-sm-11 col-md-9 justify-content-center mx-auto mt-4 ">
+                <div class="table-responsive">
+                    <table class="table table-white text-center mx-auto">
+                        <thead>
+                            <tr>
+                                <th scope="col">Index</th>
+                                <th scope="col">Website Name</th>
+                                <th scope="col">Visit</th>
+                                <th scope="col">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="">
+                                <td scope="row">R1C1</td>
+                                <td>R1C2</td>
+                                <td>
+                                    <button class=" visit-btn rounded  align-items-center py-2 px-3 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            data-slot="icon" class="w-6 h-6">
+                                            <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                                            <path fill-rule="evenodd"
+                                                d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 0 1 0-1.113ZM17.25 12a5.25 5.25 0 1 1-10.5 0 5.25 5.25 0 0 1 10.5 0Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+
+                                        <h5 class="m-0 fs-6  d-inline">Visit</h5>
+
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class=" delete-btn rounded  align-items-center py-2 px-3 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            data-slot="icon" class="w-6 h-6">
+                                            <path fill-rule="evenodd"
+                                                d="M16.5 4.478v.227a48.816 48.816 0 0 1 3.878.512.75.75 0 1 1-.256 1.478l-.209-.035-1.005 13.07a3 3 0 0 1-2.991 2.77H8.084a3 3 0 0 1-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 0 1-.256-1.478A48.567 48.567 0 0 1 7.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 0 1 3.369 0c1.603.051 2.815 1.387 2.815 2.951Zm-6.136-1.452a51.196 51.196 0 0 1 3.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 0 0-6 0v-.113c0-.794.609-1.428 1.364-1.452Zm-.355 5.945a.75.75 0 1 0-1.5.058l.347 9a.75.75 0 1 0 1.499-.058l-.346-9Zm5.48.058a.75.75 0 1 0-1.498-.058l-.347 9a.75.75 0 0 0 1.5.058l.345-9Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                        </svg>
+
+
+                                        <h5 class="m-0 fs-6  d-inline">Delete</h5>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </section>
+        </div>
+
+
+
+    </header>
+
+    <script src=" app/js/bootstrap.bundle.min.js"></script>
+    <script src="app/js/app.js"></script>
+</body>
+
+</html>
